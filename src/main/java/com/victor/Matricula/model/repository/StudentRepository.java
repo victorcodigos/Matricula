@@ -1,4 +1,4 @@
-package com.victor.Matricula.repository;
+package com.victor.Matricula.model.repository;
 // Dentro do pacote repositorio; JPA imple.
 
 import com.victor.Matricula.model.Student;
