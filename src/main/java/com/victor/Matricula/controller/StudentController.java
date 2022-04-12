@@ -4,8 +4,12 @@ import com.victor.Matricula.model.Student;
 import com.victor.Matricula.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
 
 import java.util.List;
+
 
 @RestController
 @RequestMapping ("/student")
@@ -24,6 +28,19 @@ public class StudentController {
      @GetMapping("/getAll")
       public List<Student> getAllStudents(){
        return studentService.getAllStudents();
+    }
+
+    @PutMapping("/updateStudent")
+    public Student updateStudent (@RequestBody Student student){
+        return  studentService.saveStudent(student);
+    }
+
+    @DeleteMapping("/{id}")
+    public void delete(@PathVariable Long id) {
+        studentService.deleteById(id);
+
+
+
     }
 }
 

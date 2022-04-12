@@ -10,16 +10,21 @@ import javax.persistence.Id;
 
 @Entity
 public class Student {
+
+
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
 
+
     // @id serve para implementar chave primaria.
+
     // @generationValue serve para implementar o auto incremente.
 
 
     private int id;
     private String name;
     private String address;
+
 
     public int getId() {
         return id;
@@ -49,5 +54,6 @@ public class Student {
 
 
     }
-}
 
+
+}
