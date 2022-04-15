@@ -16,12 +16,8 @@ public class Student {
     @GeneratedValue(strategy= GenerationType.IDENTITY)
 
 
-    // @id serve para implementar chave primaria.
 
-    // @generationValue serve para implementar o auto incremente.
-
-
-    private int id;
+    private Integer id;
     private String name;
     private String address;
 
