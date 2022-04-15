@@ -30,7 +30,8 @@ public class StudentServiceImple implements com.victor.Matricula.service.Student
     }
 
     @Override
-    public void deleteById(Long id) {
+    public void deleteById(Integer id) {
+        studentRepository.deleteById(id);
 
     }
 
