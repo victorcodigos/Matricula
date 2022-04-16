@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.lang.String;
 
 import java.util.List;
+import java.util.Optional;
 
 
 @RestController
@@ -30,7 +31,6 @@ public class StudentController {
        return studentService.getAllStudents();
     }
 
-
     @PutMapping("/updateStudent")
     public Student updateStudent (@RequestBody Student student){
         return  studentService.saveStudent(student);
@@ -40,7 +40,11 @@ public class StudentController {
     public void delete(@PathVariable Integer id) {
         studentService.deleteById(id);
 
+    }
 
+    @GetMapping("/{id}")
+    public Optional<Student> findById (@PathVariable Integer id){
+       return studentService.findById(id);
     }
 }
 

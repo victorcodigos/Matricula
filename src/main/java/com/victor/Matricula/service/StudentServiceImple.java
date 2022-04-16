@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class StudentServiceImple implements com.victor.Matricula.service.StudentService {
@@ -33,6 +34,11 @@ public class StudentServiceImple implements com.victor.Matricula.service.Student
     public void deleteById(Integer id) {
         studentRepository.deleteById(id);
 
+    }
+
+    @Override
+    public Optional<Student> findById(Integer id) {
+        return studentRepository.findById(id);
     }
 
 }
