@@ -15,18 +15,18 @@ public class Student {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
 
-
-
     private Integer id;
     private String name;
-    private String address;
+    private char gender;
+    private String email;
+    private String typeCourse;
+    private float familyIncome;
 
-
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -38,12 +38,36 @@ public class Student {
         this.name = name;
     }
 
-    public String getAddress() {
-        return address;
+    public char getGender() {
+        return gender;
     }
 
-    public void setAddress(String address) {
-        this.address = address;
+    public void setGender(char gender) {
+        this.gender = gender;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getTypeCourse() {
+        return typeCourse;
+    }
+
+    public void setTypeCourse(String typeCourse) {
+        this.typeCourse = typeCourse;
+    }
+
+    public float getFamilyIncome() {
+        return familyIncome;
+    }
+
+    public void setFamilyIncome(float familyIncome) {
+        this.familyIncome = familyIncome;
     }
 
     public Student() {

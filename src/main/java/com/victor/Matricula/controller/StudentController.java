@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
+import java.lang.String;
 
 import java.util.List;
 
@@ -19,18 +19,19 @@ public class StudentController {
     @Autowired
     private StudentService studentService;
 
-    @PostMapping
+    @PostMapping("/add")
     public String add(@RequestBody Student student) {
 
         studentService.saveStudent(student);
         return "New student added!";
     }
-     @GetMapping
+     @GetMapping("/getAll")
       public List<Student> getAllStudents(){
        return studentService.getAllStudents();
     }
 
-    @PutMapping
+
+    @PutMapping("/updateStudent")
     public Student updateStudent (@RequestBody Student student){
         return  studentService.saveStudent(student);
     }
